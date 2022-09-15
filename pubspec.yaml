@@ -1,0 +1,33 @@
+name: sentry_test
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: '>=2.17.6 <3.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  flutter:
+    sdk: flutter
+  sentry_flutter: ^6.9.1
+  #  for source map and debug symbol upload automatically
+  sentry_dart_plugin: ^1.0.0-beta.1
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+sentry:
+  auth_token: 7ee2e5fa698c49d3ad717da3699fd1d299d8dabca3d944a49e909b246c129f5e
+  upload_native_symbols: true
+  upload_source_maps: true
+  include_native_sources: false
+  project: sentry-test
+  org: bigbasket-9u
+  log_level: error # possible values: trace, debug, info, warn, error
+
